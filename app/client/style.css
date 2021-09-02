@@ -1,21 +1,30 @@
 .navBar {
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
     box-shadow: none;
     border: none !important;
-    background-color: #4DD080 !important;
+    background-color: #FF0000 !important;
+    color: #FFFFFF !important;
+}
+
+.navBar .item {
+    color: #FFFFFF !important;
+}
+
+.homeButton {
+    color: #FFFFFF !important;
 }
 
 .navBar .active.item {
     font-weight: bold !important;
     background: none !important;
     text-decoration: underline !important;
-    text-decoration-color: gray !important;
+    text-decoration-color: #FFFFFF !important;
     text-underline-offset: 0.5em !important;
 }
 
 .navBar .item:hover {
     background: none !important;
     text-decoration: underline !important;
-    text-decoration-color: gray !important;
+    text-decoration-color: #FFFFFF !important;
     text-underline-offset: 0.5em !important;
 }
