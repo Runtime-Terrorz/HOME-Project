@@ -19,3 +19,21 @@
     text-decoration-color: gray !important;
     text-underline-offset: 0.5em !important;
 }
+
+.ui.container .ui.container.grid {
+  margin-top: 10px;
+}
+
+.ui.container.grid .row {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.row .twelve.wide.column {
+  padding-top: 1rem;
+}
+.row .thirteen.wide.column {
+  padding-top: 1rem;
+}
+.ui.container.inventory {
+  margin-bottom: 2rem;
+}
