@@ -23,6 +23,7 @@ class InventoryCollection extends BaseCollection {
       },
       name: String,
       location: String,
+      should_have: Number,
       quantity: Number,
       lot: Number,
       expiration: new Date(),
@@ -34,16 +35,18 @@ class InventoryCollection extends BaseCollection {
    * @param medication the classification of medicine.
    * @param name the name of the item.
    * @param location the location of the item.
+   * @param should_have the number of items that is recommended to have in stock.
    * @param quantity the number of items.
    * @param lot the lot number of the item.
    * @param expiration expiration date of the item.
    * @return {String} the docID of the new document.
    */
-  define({ medication, name, location, quantity, lot, expiration }) {
+  define({ medication, name, location, should_have, quantity, lot, expiration }) {
     const docID = this._collection.insert({
       medication,
       name,
       location,
+      should_have,
       quantity,
       lot,
       expiration,
@@ -54,21 +57,29 @@ class InventoryCollection extends BaseCollection {
   /**
    * Updates the given document.
    * @param docID the id of the document to update.
-   * @param name the new name (optional).
-   * @param quantity the new quantity (optional).
-   * @param condition the new condition (optional).
+   * @param name the name of the item.
+   * @param location the location of the item.
+   * @param should_have the number of items that is recommended to have in stock.
+   * @param quantity the number of items.
+   * @param expiration expiration date of the item.
    */
-  update(docID, { name, quantity, condition }) {
+  update(docID, { name, location, should_have, quantity, expiration }) {
     const updateData = {};
     if (name) {
       updateData.name = name;
+    }
+    if (location) {
+      updateData.location = location;
+    }
+    if (_.isNumber(should_have)) {
+      updateData.should_have = should_have;
     }
     // if (quantity) { NOTE: 0 is falsy so we need to check if the quantity is a number.
     if (_.isNumber(quantity)) {
       updateData.quantity = quantity;
     }
-    if (condition) {
-      updateData.condition = condition;
+    if (expiration) {
+      updateData.expiration = expiration;
     }
     this._collection.update(docID, { $set: updateData });
   }
