@@ -23,7 +23,7 @@ class Inventory extends React.Component {
                 <Grid.Column width={12}>
                   Showing 1-3 of 3
                 </Grid.Column>
-                <Grid.Column width={2}>
+                <Grid.Column width={4}>
                   <Dropdown
                       text='Filter'
                       icon='filter'
@@ -40,21 +40,19 @@ class Inventory extends React.Component {
                       <Dropdown.Item>Pills</Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
-                </Grid.Column>
-                <Grid.Column>
                   <Link to={'/edit'}>
                     <Button
-                      icon
-                      labelPosition='left'
-                      color='blue'
-                  >
+                        icon
+                        labelPosition='left'
+                        color='blue'
+                        floated='right'
+                    >
                       <Icon name='pencil'/> Edit
                     </Button>
                   </Link>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
-          <Grid>
           <Table celled>
             <Table.Header>
               <Table.Row>
@@ -89,7 +87,6 @@ class Inventory extends React.Component {
               </Table.Row>
             </Table.Body>
           </Table>
-          </Grid>
         </Container>
     );
   }

@@ -10,7 +10,7 @@ class EditInventory extends React.Component {
   render() {
     return (
         <Container className="inventory">
-          <Grid container column={3} >
+          <Grid container column={3}>
             <Grid.Row column={2} className="top inventory">
               <Grid.Column width={12}>
                 <Header as="h1" textAlign="left">Inventory</Header>
@@ -23,11 +23,10 @@ class EditInventory extends React.Component {
               <Grid.Column width={12}>
                 Showing 1-3 of 3
               </Grid.Column>
-              <Grid.Column width={2}>
+              <Grid.Column width={4}>
                 <Dropdown
                     text='Filter'
                     icon='filter'
-                    floating
                     labeled
                     button
                     className='icon'
@@ -40,21 +39,19 @@ class EditInventory extends React.Component {
                     <Dropdown.Item>Pills</Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-              </Grid.Column>
-              <Grid.Column>
                 <Link to={'/inventory'}>
                   <Button
-                  icon
-                  labelPosition='left'
-                  color='red'
+                      icon
+                      labelPosition='left'
+                      color='red'
+                      floated='right'
                   >
-                  <Icon name='delete'/> Cancel
+                    <Icon name='delete'/> Cancel
                   </Button>
                 </Link>
               </Grid.Column>
             </Grid.Row>
           </Grid>
-          <Grid>
             <Table celled>
               <Table.Header>
                 <Table.Row>
@@ -101,7 +98,6 @@ class EditInventory extends React.Component {
                 </Table.Row>
               </Table.Footer>
             </Table>
-          </Grid>
         </Container>
     );
   }
