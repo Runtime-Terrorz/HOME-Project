@@ -1,15 +1,16 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import { Container, Table, Header, Grid, Search, Dropdown } from 'semantic-ui-react';
+import { withRouter, Link } from 'react-router-dom';
+import { Container, Table, Header, Grid, Search, Dropdown, Icon, Button } from 'semantic-ui-react';
 
 /** Inventory Page Mockup */
 /** Render a table containing Inventory. */
 class Inventory extends React.Component {
+
   /** renders page with mockup data until Inventory documents are created */
   render() {
     return (
         <Container className="inventory">
-            <Grid container column={2}>
+            <Grid container column={3}>
               <Grid.Row column={2} className="top inventory">
               <Grid.Column width={12}>
                 <Header as="h1" textAlign="left">Inventory</Header>
@@ -19,10 +20,10 @@ class Inventory extends React.Component {
               </Grid.Column>
               </Grid.Row>
               <Grid.Row>
-                <Grid.Column width={13}>
+                <Grid.Column width={12}>
                   Showing 1-3 of 3
                 </Grid.Column>
-                <Grid.Column width={3}>
+                <Grid.Column width={2}>
                   <Dropdown
                       text='Filter'
                       icon='filter'
@@ -39,6 +40,17 @@ class Inventory extends React.Component {
                       <Dropdown.Item>Pills</Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
+                </Grid.Column>
+                <Grid.Column>
+                  <Link to={'/edit'}>
+                    <Button
+                      icon
+                      labelPosition='left'
+                      color='blue'
+                  >
+                      <Icon name='pencil'/> Edit
+                    </Button>
+                  </Link>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
