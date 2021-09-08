@@ -10,6 +10,11 @@ function addData(data) {
   Stuffs.define(data);
 }
 
+function addInventoryData(data) {
+  console.log(`  Adding: ${data.medication} (${data.name})`);
+  Inventorys.define(data);
+}
+
 /** Initialize the collection if empty. */
 if (Stuffs.count() === 0) {
   if (Meteor.settings.defaultData) {
@@ -22,6 +27,6 @@ if (Stuffs.count() === 0) {
 if (Inventorys.count() === 0) {
   if (Meteor.settings.defaultInventory) {
     console.log('Creating default data for inventory.');
-    /* Meteor.settings.defaultInventory.map(data => addData(data)); */
+    Meteor.settings.defaultInventory.map(data => addInventoryData(data));
   }
 }
