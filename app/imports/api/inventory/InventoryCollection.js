@@ -5,17 +5,16 @@ import { _ } from 'meteor/underscore';
 import { Roles } from 'meteor/alanning:roles';
 import BaseCollection from '../base/BaseCollection';
 
-export const inventoryMedications = ['Allergy & Code Medicines', 'Analgesics/Antiinflammatory', 'Antihypertensives',
-  'Antimicrobials', 'Cardiac/Cholesterol', 'Dermatologic Preparations', 'Diabetes Meds', 'Ear and Eye Preparations',
+export const inventoryMedications = ['Allergy & Cold Medicines', 'Analgesics/Anti-inflammatory', 'Anti-hypertensives',
+  'Anti-microbial', 'Cardiac/Cholesterol', 'Dermatological Preparations', 'Diabetes Meds', 'Ear and Eye Preparations',
   'Emergency Kit', 'GI Meds', 'GYN Meds', 'Pulmonary', 'Smoking Cessation', 'Vitamins and Supplements'];
 export const inventoryPublications = {
-  inventory: 'Stuff',
-  inventoryAdmin: 'StuffAdmin',
+  inventory: 'inventory',
 };
 
 class InventoryCollection extends BaseCollection {
   constructor() {
-    super('Inventorys', new SimpleSchema({
+    super('Inventories', new SimpleSchema({
       medication: {
         type: String,
         allowedValues: inventoryMedications,
@@ -98,7 +97,7 @@ class InventoryCollection extends BaseCollection {
 
   /**
    * Default publication method for entities.
-   * It publishes the entire collection for admin and just the inventory associated to an owner.
+   * It publishes the entire collection and just the inventory associated to an owner.
    */
   publish() {
     if (Meteor.isServer) {
@@ -107,15 +106,6 @@ class InventoryCollection extends BaseCollection {
       /** This subscription publishes only the documents associated with the logged in user */
       Meteor.publish(inventoryPublications.inventory, function publish() {
         if (this.userId) {
-          const username = Meteor.users.findOne(this.userId).username;
-          return instance._collection.find({ owner: username });
-        }
-        return this.ready();
-      });
-
-      /** This subscription publishes all documents regardless of user, but only if the logged in user is the Admin. */
-      Meteor.publish(inventoryPublications.inventoryAdmin, function publish() {
-        if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
           return instance._collection.find();
         }
         return this.ready();
@@ -133,20 +123,9 @@ class InventoryCollection extends BaseCollection {
     return null;
   }
 
-  /**
-   * Subscription method for admin users.
-   * It subscribes to the entire collection.
-   */
-  subscribeInventoryAdmin() {
-    if (Meteor.isClient) {
-      return Meteor.subscribe(inventoryPublications.inventoryAdmin);
-    }
-    return null;
-  }
-
 }
 
 /**
  * Provides the singleton instance of this class to all other entities.
  */
-export const Inventorys = new InventoryCollection();
+export const Inventories = new InventoryCollection();
