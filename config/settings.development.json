@@ -17,7 +17,7 @@
       "location": "Case 2",
       "should_have": 15,
       "quantity": 100,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-10-16T00:00:00.000Z"
     },
     { "medication": "Allergy & Cold Medicines",
@@ -25,7 +25,7 @@
       "location": "Case 2",
       "should_have": 1,
       "quantity": 2,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-05-17T00:00:00.000Z"
     },
     { "medication": "Allergy & Cold Medicines",
@@ -33,7 +33,7 @@
       "location": "Case 2",
       "should_have": 1,
       "quantity": 1.5,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-16T00:00:00.000Z"
     },
     { "medication": "Allergy & Cold Medicines",
@@ -41,15 +41,15 @@
       "location": "Case 2",
       "should_have": 50,
       "quantity": 415,
-      "lot": null,
-      "expiration": null
+      "lot": 100,
+      "expiration": "2021-09-16T00:00:00.000Z"
     },
     { "medication": "Allergy & Cold Medicines",
       "name": "Diphenhydramine Soln",
       "location": "Case 2",
       "should_have": 1,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-10-15T00:00:00.000Z"
     },
 
@@ -59,7 +59,7 @@
       "location": "Case 4",
       "should_have": 2,
       "quantity": 2,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Analgesics/Antiinflammatory",
@@ -67,7 +67,7 @@
       "location": "Case 4",
       "should_have": 60,
       "quantity": 60,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-05-17T00:00:00.000Z"
     },
     { "medication": "Analgesics/Antiinflammatory",
@@ -75,7 +75,7 @@
       "location": "Case 4",
       "should_have": 30,
       "quantity": 30,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-04-18T00:00:00.000Z"
     },
     { "medication": "Analgesics/Antiinflammatory",
@@ -83,7 +83,7 @@
       "location": "Case 4",
       "should_have": 2,
       "quantity": 1,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-05-16T00:00:00.000Z"
     },
     { "medication": "Analgesics/Antiinflammatory",
@@ -91,7 +91,7 @@
       "location": "Case 4",
       "should_have": 30,
       "quantity": 100,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-10-16T00:00:00.000Z"
     },
 
@@ -101,7 +101,7 @@
       "location": "Case 7",
       "should_have": 30,
       "quantity": 32,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-04-30T00:00:00.000Z"
     },
     { "medication": "Antihypertensives",
@@ -109,7 +109,7 @@
       "location": "Case 7",
       "should_have": 30,
       "quantity": 57,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-04-30T00:00:00.000Z"
     },
     { "medication": "Antihypertensives",
@@ -117,7 +117,7 @@
       "location": "Case 7",
       "should_have": 0,
       "quantity": 84,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-04-30T00:00:00.000Z"
     },
     { "medication": "Antihypertensives",
@@ -125,7 +125,7 @@
       "location": "Case 7",
       "should_have": 50,
       "quantity": 134,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-04-30T00:00:00.000Z"
     },
     { "medication": "Antihypertensives",
@@ -133,7 +133,7 @@
       "location": "Case 7",
       "should_have": 30,
       "quantity": 86,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-04-30T00:00:00.000Z"
     },
 
@@ -143,7 +143,7 @@
       "location": "Freezer",
       "should_have": 30,
       "quantity": 100,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Antimicrobials",
@@ -151,7 +151,7 @@
       "location": "Freezer",
       "should_have": 1,
       "quantity": 1,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Antimicrobials",
@@ -159,7 +159,7 @@
       "location": "Freezer",
       "should_have": 1,
       "quantity": 1,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Antimicrobials",
@@ -167,7 +167,7 @@
       "location": "Freezer",
       "should_have": 1,
       "quantity": 1,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Antimicrobials",
@@ -175,7 +175,7 @@
       "location": "Freezer",
       "should_have": 30,
       "quantity": 100,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
 
@@ -185,7 +185,7 @@
       "location": "Case 7",
       "should_have": 0,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Cardiac/Cholesterol",
@@ -193,7 +193,7 @@
       "location": "Case 7",
       "should_have": 30,
       "quantity": 90,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Cardiac/Cholesterol",
@@ -201,7 +201,7 @@
       "location": "Case 7",
       "should_have": 30,
       "quantity": 90,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Cardiac/Cholesterol",
@@ -209,7 +209,7 @@
       "location": "Case 7",
       "should_have": 30,
       "quantity": 90,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Cardiac/Cholesterol",
@@ -217,7 +217,7 @@
       "location": "Case 7",
       "should_have": 25,
       "quantity": 100,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
 
@@ -227,7 +227,7 @@
       "location": "Freezer-Derm",
       "should_have": 2,
       "quantity": 2,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Dermatologic Preparations",
@@ -235,7 +235,7 @@
       "location": "Freezer-Derm",
       "should_have": 30,
       "quantity": 67,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Dermatologic Preparations",
@@ -243,7 +243,7 @@
       "location": "Freezer-Derm",
       "should_have": 1,
       "quantity": 2,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Dermatologic Preparations",
@@ -251,7 +251,7 @@
       "location": "Freezer-Derm",
       "should_have": 1,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Dermatologic Preparations",
@@ -259,7 +259,7 @@
       "location": "Freezer-Derm",
       "should_have": 5,
       "quantity": 2,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
 
@@ -269,7 +269,7 @@
       "location": "Case 8",
       "should_have": 60,
       "quantity": 50,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Diabetes Meds",
@@ -277,7 +277,7 @@
       "location": "Case 8",
       "should_have": 30,
       "quantity": 100,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Diabetes Meds",
@@ -285,7 +285,7 @@
       "location": "Case 8",
       "should_have": 25,
       "quantity": 50,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Diabetes Meds",
@@ -293,7 +293,7 @@
       "location": "Case 8",
       "should_have": 30,
       "quantity": 60,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Diabetes Meds",
@@ -301,7 +301,7 @@
       "location": "Case 8",
       "should_have": 30,
       "quantity": 42,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
 
@@ -311,7 +311,7 @@
       "location": "Case 1",
       "should_have": 1,
       "quantity": 1,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Ear and Eye Preparations",
@@ -319,7 +319,7 @@
       "location": "Case 1",
       "should_have": 1,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Ear and Eye Preparations",
@@ -327,7 +327,7 @@
       "location": "Case 1",
       "should_have": 2,
       "quantity": 2,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Ear and Eye Preparations",
@@ -335,7 +335,7 @@
       "location": "Case 1",
       "should_have": 2,
       "quantity": 2,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Ear and Eye Preparations",
@@ -343,7 +343,7 @@
       "location": "Case 1",
       "should_have": 1,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
 
@@ -353,14 +353,14 @@
       "location": "Emergency Kit",
       "should_have": 2,
       "quantity": 2,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Emergency Kit",
       "name": "Medicaine Sting/Bite Swab",
       "location": "Emergency Kit",
       "should_have": 10, "quantity": 10,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Emergency Kit",
@@ -368,7 +368,7 @@
       "location": "Emergency Kit",
       "should_have": 2,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Emergency Kit",
@@ -376,7 +376,7 @@
       "location": "Emergency Kit",
       "should_have": 2,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Emergency Kit",
@@ -384,7 +384,7 @@
       "location": "Emergency Kit",
       "should_have": 1,
       "quantity": 1,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
 
@@ -394,7 +394,7 @@
       "location": "Case 3",
       "should_have": 50,
       "quantity": 75,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "GI Meds",
@@ -402,7 +402,7 @@
       "location": "Case 3",
       "should_have": 5,
       "quantity": 10,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "GI Meds",
@@ -410,7 +410,7 @@
       "location": "Case 3",
       "should_have": 50,
       "quantity": 112,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "GI Meds",
@@ -418,7 +418,7 @@
       "location": "Case 3",
       "should_have": 1,
       "quantity": 1,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "GI Meds",
@@ -426,7 +426,7 @@
       "location": "Case 3",
       "should_have": 1,
       "quantity": 0.33,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
 
@@ -435,35 +435,35 @@
       "name": "Miconazole Applicator Set",
       "location": "Case 3",
       "should_have": 1, "quantity": 2,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "GYN Meds",
       "name": "Reclipsen Tabs",
       "location": "Case 3",
       "should_have": 2, "quantity": 6,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "GYN Meds",
       "name": "Apri Tabs",
       "location": "Case 3",
       "should_have": 2, "quantity": 6,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "GYN Meds",
       "name": "Depo-Provera",
       "location": "Case 3",
       "should_have": 1, "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "GYN Meds",
       "name": "Detrol LA (Tolterodin Tartate)",
       "location": "Case 3",
       "should_have": 30, "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
 
@@ -473,7 +473,7 @@
       "location": "Refrigerator Closet",
       "should_have": 5,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Pulmonary",
@@ -481,7 +481,7 @@
       "location": "Refrigerator Closet",
       "should_have": 5,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Pulmonary",
@@ -489,7 +489,7 @@
       "location": "Case 1",
       "should_have": 2,
       "quantity": 3,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Pulmonary",
@@ -497,7 +497,7 @@
       "location": "Case 1",
       "should_have": 1,
       "quantity": 1,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Pulmonary",
@@ -505,7 +505,7 @@
       "location": "Case 1",
       "should_have": 1,
       "quantity": 2,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
 
@@ -515,7 +515,7 @@
       "location": "Case 5",
       "should_have": 30,
       "quantity": 120,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Smoking Cessation",
@@ -523,7 +523,7 @@
       "location": "Case 5",
       "should_have": 50,
       "quantity": 200,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Smoking Cessation",
@@ -531,7 +531,7 @@
       "location": "Case 5",
       "should_have": 50,
       "quantity": 200,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Smoking Cessation",
@@ -539,7 +539,7 @@
       "location": "Case 5",
       "should_have": 14,
       "quantity": 57,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Smoking Cessation",
@@ -547,7 +547,7 @@
       "location": "Case 5",
       "should_have": 14,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
 
@@ -557,7 +557,7 @@
       "location": "Case 6",
       "should_have": 50,
       "quantity": 210,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Vitamins and Supplements",
@@ -565,7 +565,7 @@
       "location": "Refrigerator",
       "should_have": 50,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Vitamins and Supplements",
@@ -573,7 +573,7 @@
       "location": "Refrigerator",
       "should_have": 50,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Vitamins and Supplements",
@@ -581,7 +581,7 @@
       "location": "Case 6",
       "should_have": 50,
       "quantity": 250,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     },
     { "medication": "Vitamins and Supplements",
@@ -589,7 +589,7 @@
       "location": "Refrigerator",
       "should_have": 30,
       "quantity": 0,
-      "lot": null,
+      "lot": 100,
       "expiration": "2021-09-17T00:00:00.000Z"
     }
   ]
