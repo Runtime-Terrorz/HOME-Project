@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Segment, Header } from 'semantic-ui-react';
+import { Grid, Segment, Header, Form } from 'semantic-ui-react';
 import { AutoForm, DateField, ErrorsField, NumField, SelectField, SubmitField, TextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
@@ -49,18 +49,24 @@ class AddInventory extends React.Component {
   render() {
     let fRef = null;
     return (
-        <Grid container centered>
-          <Grid.Column>
+        <Grid container centered >
+          <Grid.Column width={10} padded>
             <Header as="h2" textAlign="center">Add Inventory</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={formSchema} onSubmit={data => this.submit(data, fRef)} >
-              <Segment>
+              <Segment inverted style={{ backgroundColor: '#800000' }}>
                 <SelectField name='medication'/>
-                <TextField name='name'/>
-                <TextField name='location'/>
-                <NumField name='should_have' decimal={false}/>
-                <NumField name='quantity' decimal={false}/>
-                <NumField name='lot' decimal={false}/>
-                <TextField name='expiration'/>
+                <TextField name='name' placeholder={'Diphenhydramine 50 mg/mL'}/>
+                <Form.Group widths={'equal'}>
+                  <TextField name='location'/>
+                  <Form.Group>
+                    <NumField name='should_have' decimal={false}/>
+                    <NumField name='quantity' decimal={false}/>
+                  </Form.Group>
+                </Form.Group>
+                <Form.Group widths={'equal'}>
+                  <TextField name='expiration' placeholder={'Ex: 08/04/2022'}/>
+                  <NumField name='lot' decimal={false}/>
+                </Form.Group>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
               </Segment>
