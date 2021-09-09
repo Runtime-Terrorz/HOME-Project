@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Segment, Header, Form } from 'semantic-ui-react';
-import { AutoForm, DateField, ErrorsField, NumField, SelectField, SubmitField, TextField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, NumField, SelectField, SubmitField, TextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import 'uniforms-bridge-simple-schema-2'; // required for Uniforms
@@ -50,7 +50,7 @@ class AddInventory extends React.Component {
     let fRef = null;
     return (
         <Grid container centered >
-          <Grid.Column width={10} padded>
+          <Grid.Column width={10}>
             <Header as="h2" textAlign="center">Add Inventory</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={formSchema} onSubmit={data => this.submit(data, fRef)} >
               <Segment inverted style={{ backgroundColor: '#800000' }}>
