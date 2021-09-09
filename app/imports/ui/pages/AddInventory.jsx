@@ -1,25 +1,26 @@
 import React from 'react';
-import { Grid, Segment, Header, Form } from 'semantic-ui-react';
-import { AutoForm, ErrorsField, NumField, SelectField, SubmitField, TextField } from 'uniforms-semantic';
+import { Grid, Segment, Header } from 'semantic-ui-react';
+import { AutoForm, DateField, ErrorsField, NumField, SelectField, SubmitField, TextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import 'uniforms-bridge-simple-schema-2'; // required for Uniforms
 import SimpleSchema from 'simpl-schema';
 import { stuffDefineMethod } from '../../api/stuff/StuffCollection.methods';
+import { inventoryMedications } from '../../api/inventory/InventoryCollection';
 
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
-  name: String,
-  reserves: Number,
-  storage: {
+  medication: {
     type: String,
-    allowedValues: ['Case 1', 'Case 2', 'Case 3', 'Case 4', 'Case 5', 'Case 6', 'Case 7',
-      'Case 8', 'Refrigerator Closet', 'Bottom Drawer', 'Freezer', 'Freezer-Derm', 'Drawer 2-2',
-      'Drawer 2-3', 'Emergency Kit', 'Refrigerator'],
-    defaultValue: 'Case 1',
+    allowedValues: inventoryMedications,
+    defaultValue: '',
   },
-    lot: String,
-    expiration: String,
+  name: String,
+  location: String,
+  should_have: Number,
+  quantity: Number,
+  lot: Number,
+  expiration: new Date(),
 });
 
 /** Renders the Page for adding stuff. */
@@ -28,20 +29,20 @@ class AddInventory extends React.Component {
   /** On submit, insert the data. */
   submit(data, formRef) {
     // console.log('AddInventory.submit', data);
-    const { name, reserves, storage, lot, expiration } = data;
+    const { medication, name, location, should_have, quantity, lot, expiration } = data;
     const owner = Meteor.user().username;
     // console.log(`{ ${name}, ${quantity}, ${condition}, ${owner} }`);
-    stuffDefineMethod.call({ name, reserves, storage, lot, expiration, owner },
-        (error) => {
-          if (error) {
-            swal('Error', error.message, 'error');
-            // console.error(error.message);
-          } else {
-            swal('Success', 'Item added successfully', 'success');
-            formRef.reset();
-            // console.log('Success');
-          }
-        });
+    stuffDefineMethod.call({ medication, name, location, should_have, quantity, lot, expiration, owner },
+      (error) => {
+        if (error) {
+          swal('Error', error.message, 'error');
+          // console.error(error.message);
+        } else {
+          swal('Success', 'Item added successfully', 'success');
+          formRef.reset();
+          // console.log('Success');
+        }
+      });
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
@@ -50,16 +51,16 @@ class AddInventory extends React.Component {
     return (
         <Grid container centered>
           <Grid.Column>
-            <Header as="h2" textAlign="center">Add New Medication</Header>
+            <Header as="h2" textAlign="center">Add Inventory</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={formSchema} onSubmit={data => this.submit(data, fRef)} >
               <Segment>
-                <TextField name='name' placeholder={'Ex: Acetaminophen 500 mg Caps'}/>
-                <SelectField name='storage'/>
-                <Form.Group widths={'equal'}>
-                  <NumField name='reserves' decimal={false} placeholder={'The total quantity to be added'}/>
-                  <TextField name='lot' placeholder={'Ex: #133258'}/>
-                  <TextField name='expiration' placeholder={'DD/MM/YYYY'}/>
-                </Form.Group>
+                <SelectField name='medication'/>
+                <TextField name='name'/>
+                <TextField name='location'/>
+                <NumField name='should_have' decimal={false}/>
+                <NumField name='quantity' decimal={false}/>
+                <NumField name='lot' decimal={false}/>
+                <DateField name='expiration'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
               </Segment>
