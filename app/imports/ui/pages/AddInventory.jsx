@@ -5,7 +5,7 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import 'uniforms-bridge-simple-schema-2'; // required for Uniforms
 import SimpleSchema from 'simpl-schema';
-import { stuffDefineMethod } from '../../api/stuff/StuffCollection.methods';
+import { inventoryDefineMethod } from '../../api/inventory/InventoryCollection.methods';
 import { inventoryMedications } from '../../api/inventory/InventoryCollection';
 
 /** Create a schema to specify the structure of the data to appear in the form. */
@@ -20,7 +20,7 @@ const formSchema = new SimpleSchema({
   should_have: Number,
   quantity: Number,
   lot: Number,
-  expiration: new Date(),
+  expiration: String,
 });
 
 /** Renders the Page for adding stuff. */
@@ -32,7 +32,7 @@ class AddInventory extends React.Component {
     const { medication, name, location, should_have, quantity, lot, expiration } = data;
     const owner = Meteor.user().username;
     // console.log(`{ ${name}, ${quantity}, ${condition}, ${owner} }`);
-    stuffDefineMethod.call({ medication, name, location, should_have, quantity, lot, expiration, owner },
+    inventoryDefineMethod.call({ medication, name, location, should_have, quantity, lot, expiration, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -60,7 +60,7 @@ class AddInventory extends React.Component {
                 <NumField name='should_have' decimal={false}/>
                 <NumField name='quantity' decimal={false}/>
                 <NumField name='lot' decimal={false}/>
-                <DateField name='expiration'/>
+                <TextField name='expiration'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
               </Segment>

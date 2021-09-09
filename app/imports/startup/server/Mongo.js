@@ -11,7 +11,7 @@ function addData(data) {
 }
 
 function addInventoryData(data) {
-  console.log(`  Adding: ${data.medication} (${data.name})`);
+  console.log(`  Adding: ${data.medication} (${data.owner})`);
   Inventories.define(data);
 }
 

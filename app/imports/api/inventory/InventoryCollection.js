@@ -8,7 +8,7 @@ export const inventoryMedications = ['Allergy & Cold Medicines', 'Analgesics/Ant
   'Anti-microbial', 'Cardiac/Cholesterol', 'Dermatological Preparations', 'Diabetes Meds', 'Ear and Eye Preparations',
   'Emergency Kit', 'GI Meds', 'GYN Meds', 'Pulmonary', 'Smoking Cessation', 'Vitamins and Supplements'];
 export const inventoryPublications = {
-  inventory: 'inventory',
+  inventory: 'Inventory',
 };
 
 class InventoryCollection extends BaseCollection {
@@ -24,7 +24,8 @@ class InventoryCollection extends BaseCollection {
       should_have: Number,
       quantity: Number,
       lot: Number,
-      expiration: new Date(),
+      expiration: String,
+      owner: String,
     }));
   }
 
@@ -39,7 +40,7 @@ class InventoryCollection extends BaseCollection {
    * @param expiration expiration date of the item.
    * @return {String} the docID of the new document.
    */
-  define({ medication, name, location, should_have, quantity, lot, expiration }) {
+  define({ medication, name, location, should_have, quantity, lot, expiration, owner }) {
     const docID = this._collection.insert({
       medication,
       name,
@@ -48,6 +49,7 @@ class InventoryCollection extends BaseCollection {
       quantity,
       lot,
       expiration,
+      owner,
     });
     return docID;
   }
@@ -98,6 +100,7 @@ class InventoryCollection extends BaseCollection {
    * Default publication method for entities.
    * It publishes the entire collection and just the inventory associated to an owner.
    */
+
   publish() {
     if (Meteor.isServer) {
       // get the InventoryCollection instance.
@@ -105,7 +108,8 @@ class InventoryCollection extends BaseCollection {
       /** This subscription publishes only the documents associated with the logged in user */
       Meteor.publish(inventoryPublications.inventory, function publish() {
         if (this.userId) {
-          return instance._collection.find();
+          const username = Meteor.users.findOne(this.userId).username;
+          return instance._collection.find({ owner: username });
         }
         return this.ready();
       });

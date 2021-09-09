@@ -18,7 +18,8 @@
       "should_have": 15,
       "quantity": 100,
       "lot": 100,
-      "expiration": "2021-10-16T00:00:00.000Z"
+      "expiration": "2021-10-16T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Allergy & Cold Medicines",
       "name": "Cetirizine Soln",
@@ -26,7 +27,8 @@
       "should_have": 1,
       "quantity": 2,
       "lot": 100,
-      "expiration": "2021-05-17T00:00:00.000Z"
+      "expiration": "2021-05-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Allergy & Cold Medicines",
       "name": "Cold and Flu Syrup",
@@ -34,7 +36,8 @@
       "should_have": 1,
       "quantity": 1.5,
       "lot": 100,
-      "expiration": "2021-09-16T00:00:00.000Z"
+      "expiration": "2021-09-16T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Allergy & Cold Medicines",
       "name": "Diphenhydramine 25 mg tabs",
@@ -42,7 +45,8 @@
       "should_have": 50,
       "quantity": 415,
       "lot": 100,
-      "expiration": "2021-09-16T00:00:00.000Z"
+      "expiration": "2021-09-16T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Allergy & Cold Medicines",
       "name": "Diphenhydramine Soln",
@@ -50,135 +54,55 @@
       "should_have": 1,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-10-15T00:00:00.000Z"
+      "expiration": "2021-10-15T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
 
-
-    { "medication": "Analgesics/Antiinflammatory",
-      "name": "Acetaminophen 160mg/5 ml Susp",
-      "location": "Case 4",
-      "should_have": 2,
-      "quantity": 2,
-      "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
-    },
-    { "medication": "Analgesics/Antiinflammatory",
-      "name": "Acetaminophen 500 mg Caps",
-      "location": "Case 4",
-      "should_have": 60,
-      "quantity": 60,
-      "lot": 100,
-      "expiration": "2021-05-17T00:00:00.000Z"
-    },
-    { "medication": "Analgesics/Antiinflammatory",
-      "name": "Acetaminophen 80 mg chewable tabs",
-      "location": "Case 4",
-      "should_have": 30,
-      "quantity": 30,
-      "lot": 100,
-      "expiration": "2021-04-18T00:00:00.000Z"
-    },
-    { "medication": "Analgesics/Antiinflammatory",
-      "name": "Acetaminophen Infant Drops",
-      "location": "Case 4",
-      "should_have": 2,
-      "quantity": 1,
-      "lot": 100,
-      "expiration": "2021-05-16T00:00:00.000Z"
-    },
-    { "medication": "Analgesics/Antiinflammatory",
-      "name": "Allopurinol 100 mg tabs",
-      "location": "Case 4",
-      "should_have": 30,
-      "quantity": 100,
-      "lot": 100,
-      "expiration": "2021-10-16T00:00:00.000Z"
-    },
-
-
-    { "medication": "Antihypertensives",
-      "name": "Amlodipine 5 mg",
-      "location": "Case 7",
-      "should_have": 30,
-      "quantity": 32,
-      "lot": 100,
-      "expiration": "2021-04-30T00:00:00.000Z"
-    },
-    { "medication": "Antihypertensives",
-      "name": "Amlodipine 10 mg",
-      "location": "Case 7",
-      "should_have": 30,
-      "quantity": 57,
-      "lot": 100,
-      "expiration": "2021-04-30T00:00:00.000Z"
-    },
-    { "medication": "Antihypertensives",
-      "name": "Amlodipine 5mg/ Atorvastatin 20 mg",
-      "location": "Case 7",
-      "should_have": 0,
-      "quantity": 84,
-      "lot": 100,
-      "expiration": "2021-04-30T00:00:00.000Z"
-    },
-    { "medication": "Antihypertensives",
-      "name": "Chlorthalidone or Hydrochlorothiazide 25 mg tabs",
-      "location": "Case 7",
-      "should_have": 50,
-      "quantity": 134,
-      "lot": 100,
-      "expiration": "2021-04-30T00:00:00.000Z"
-    },
-    { "medication": "Antihypertensives",
-      "name": "Furosemide 20 mg ",
-      "location": "Case 7",
-      "should_have": 30,
-      "quantity": 86,
-      "lot": 100,
-      "expiration": "2021-04-30T00:00:00.000Z"
-    },
-
-
-    { "medication": "Antimicrobials",
+    { "medication": "Anti-microbial",
       "name": "Amoxicillin 250 mg Chewables",
       "location": "Freezer",
       "should_have": 30,
       "quantity": 100,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-    { "medication": "Antimicrobials",
+    { "medication": "Anti-microbial",
       "name": "Amoxicillin 125 mg/5ml Susp",
       "location": "Freezer",
       "should_have": 1,
       "quantity": 1,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-    { "medication": "Antimicrobials",
+    { "medication": "Anti-microbial",
       "name": "Amoxicillin 250 mg/5ml Susp",
       "location": "Freezer",
       "should_have": 1,
       "quantity": 1,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-    { "medication": "Antimicrobials",
+    { "medication": "Anti-microbial",
       "name": "Amoxicillin 400 mg/5ml Susp",
       "location": "Freezer",
       "should_have": 1,
       "quantity": 1,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-    { "medication": "Antimicrobials",
+    { "medication": "Anti-microbial",
       "name": "Amoxicillin 500 mg Capsules",
       "location": "Freezer",
       "should_have": 30,
       "quantity": 100,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-
 
     { "medication": "Cardiac/Cholesterol",
       "name": "Lovastatin 20 mg",
@@ -186,7 +110,8 @@
       "should_have": 0,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Cardiac/Cholesterol",
       "name": "Simvastatin 10 mg",
@@ -194,7 +119,8 @@
       "should_have": 30,
       "quantity": 90,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Cardiac/Cholesterol",
       "name": "Simvastatin 20 mg",
@@ -202,7 +128,8 @@
       "should_have": 30,
       "quantity": 90,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Cardiac/Cholesterol",
       "name": "Simvastatin 40 mg",
@@ -210,7 +137,8 @@
       "should_have": 30,
       "quantity": 90,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Cardiac/Cholesterol",
       "name": "Nitroglycerin 0.4 mg tabs",
@@ -218,51 +146,55 @@
       "should_have": 25,
       "quantity": 100,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
 
-
-    { "medication": "Dermatologic Preparations",
+    { "medication": "Dermatological Preparations",
       "name": "Bacitracin Ointment 15 gm tube",
       "location": "Freezer-Derm",
       "should_have": 2,
       "quantity": 2,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-    { "medication": "Dermatologic Preparations",
+    { "medication": "Dermatological Preparations",
       "name": "Bacitracin Ointment packets",
       "location": "Freezer-Derm",
       "should_have": 30,
       "quantity": 67,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-    { "medication": "Dermatologic Preparations",
+    { "medication": "Dermatological Preparations",
       "name": "Benzoyl Peroxide 10% Lotion",
       "location": "Freezer-Derm",
       "should_have": 1,
       "quantity": 2,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-    { "medication": "Dermatologic Preparations",
+    { "medication": "Dermatological Preparations",
       "name": "Benzoyl Peroxide 10% Wash",
       "location": "Freezer-Derm",
       "should_have": 1,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-    { "medication": "Dermatologic Preparations",
+    { "medication": "Dermatological Preparations",
       "name": "Chapstick",
       "location": "Freezer-Derm",
       "should_have": 5,
       "quantity": 2,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-
 
     { "medication": "Diabetes Meds",
       "name": "Glipizide 5 mg",
@@ -270,7 +202,8 @@
       "should_have": 60,
       "quantity": 50,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Diabetes Meds",
       "name": "Glipizide 10 mg",
@@ -278,7 +211,8 @@
       "should_have": 30,
       "quantity": 100,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Diabetes Meds",
       "name": "Glucose Tablets",
@@ -286,7 +220,8 @@
       "should_have": 25,
       "quantity": 50,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Diabetes Meds",
       "name": "Metformin ER 500 mg tabs",
@@ -294,7 +229,8 @@
       "should_have": 30,
       "quantity": 60,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Diabetes Meds",
       "name": "SGLT2 Inhibitors (Dapagliflozin 5 mg)",
@@ -302,9 +238,9 @@
       "should_have": 30,
       "quantity": 42,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-
 
     { "medication": "Ear and Eye Preparations",
       "name": "Carbamide Peroxide 6.5%",
@@ -312,7 +248,8 @@
       "should_have": 1,
       "quantity": 1,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Ear and Eye Preparations",
       "name": "Antipyrine & Benzocaine Otic",
@@ -320,7 +257,8 @@
       "should_have": 1,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Ear and Eye Preparations",
       "name": "Gentamycin, Cipro, or Ofloxacin Ophthalmic Soln",
@@ -328,7 +266,8 @@
       "should_have": 2,
       "quantity": 2,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Ear and Eye Preparations",
       "name": "Artificial Tears",
@@ -336,7 +275,8 @@
       "should_have": 2,
       "quantity": 2,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Ear and Eye Preparations",
       "name": "Neomycin/Polymyxin/Hydrocortisone (Cortisporin) Otic",
@@ -344,24 +284,25 @@
       "should_have": 1,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-
-
     { "medication": "Emergency Kit",
       "name": "Ammonia Inhalant",
       "location": "Emergency Kit",
       "should_have": 2,
       "quantity": 2,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Emergency Kit",
       "name": "Medicaine Sting/Bite Swab",
       "location": "Emergency Kit",
       "should_have": 10, "quantity": 10,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Emergency Kit",
       "name": "Epipen",
@@ -369,7 +310,8 @@
       "should_have": 2,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Emergency Kit",
       "name": "Epipen Jr.",
@@ -377,7 +319,8 @@
       "should_have": 2,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Emergency Kit",
       "name": "Diphenhydramine 50 mg/mL",
@@ -385,9 +328,9 @@
       "should_have": 1,
       "quantity": 1,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-
 
     { "medication": "GI Meds",
       "name": "Antacid",
@@ -395,7 +338,8 @@
       "should_have": 50,
       "quantity": 75,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "GI Meds",
       "name": "Bisacodyl Suppositories",
@@ -403,7 +347,8 @@
       "should_have": 5,
       "quantity": 10,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "GI Meds",
       "name": "Proton Pump Inhibitor",
@@ -411,7 +356,8 @@
       "should_have": 50,
       "quantity": 112,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "GI Meds",
       "name": "Lactulose Solution",
@@ -419,7 +365,8 @@
       "should_have": 1,
       "quantity": 1,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "GI Meds",
       "name": "Pepto-Bismol",
@@ -427,46 +374,50 @@
       "should_have": 1,
       "quantity": 0.33,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-
 
     { "medication": "GYN Meds",
       "name": "Miconazole Applicator Set",
       "location": "Case 3",
       "should_have": 1, "quantity": 2,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "GYN Meds",
       "name": "Reclipsen Tabs",
       "location": "Case 3",
       "should_have": 2, "quantity": 6,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "GYN Meds",
       "name": "Apri Tabs",
       "location": "Case 3",
       "should_have": 2, "quantity": 6,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "GYN Meds",
       "name": "Depo-Provera",
       "location": "Case 3",
       "should_have": 1, "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "GYN Meds",
       "name": "Detrol LA (Tolterodin Tartate)",
       "location": "Case 3",
       "should_have": 30, "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-
 
     { "medication": "Pulmonary",
       "name": "Ipratropium Inhalation Soln.",
@@ -474,15 +425,18 @@
       "should_have": 5,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
+
     { "medication": "Pulmonary",
       "name": "Albuterol Inhalation Soln. ",
       "location": "Refrigerator Closet",
       "should_have": 5,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Pulmonary",
       "name": "Albuterol HFA (Proair/Ventolin)",
@@ -490,7 +444,8 @@
       "should_have": 2,
       "quantity": 3,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Pulmonary",
       "name": "Steroid Inhaler",
@@ -498,7 +453,8 @@
       "should_have": 1,
       "quantity": 1,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Pulmonary",
       "name": "Steroid/Long Acting Beta Agonist (Child)",
@@ -506,9 +462,9 @@
       "should_have": 1,
       "quantity": 2,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-
 
     { "medication": "Smoking Cessation",
       "name": "Buproprion ER 150 mg",
@@ -516,7 +472,8 @@
       "should_have": 30,
       "quantity": 120,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Smoking Cessation",
       "name": "Nicotine Gum 2 mg",
@@ -524,15 +481,18 @@
       "should_have": 50,
       "quantity": 200,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
+
     { "medication": "Smoking Cessation",
       "name": "Nicotine Gum 4 mg",
       "location": "Case 5",
       "should_have": 50,
       "quantity": 200,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Smoking Cessation",
       "name": "Nicotine Patch 7 mg",
@@ -540,7 +500,8 @@
       "should_have": 14,
       "quantity": 57,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Smoking Cessation",
       "name": "Nicotine Patch 14 mg",
@@ -548,17 +509,17 @@
       "should_have": 14,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
-
-
     { "medication": "Vitamins and Supplements",
       "name": "Multivitamins - Adult",
       "location": "Case 6",
       "should_have": 50,
       "quantity": 210,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Vitamins and Supplements",
       "name": "Multivitamins - Adult Gummies",
@@ -566,7 +527,8 @@
       "should_have": 50,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Vitamins and Supplements",
       "name": "Multivitamins - Children's Gummies",
@@ -574,7 +536,8 @@
       "should_have": 50,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Vitamins and Supplements",
       "name": "Multivitamins - Kids Chewable",
@@ -582,7 +545,8 @@
       "should_have": 50,
       "quantity": 250,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     },
     { "medication": "Vitamins and Supplements",
       "name": "Calcium Supplements",
@@ -590,7 +554,8 @@
       "should_have": 30,
       "quantity": 0,
       "lot": 100,
-      "expiration": "2021-09-17T00:00:00.000Z"
+      "expiration": "2021-09-17T00:00:00.000Z",
+      "owner": "default@foo.com"
     }
   ]
 }

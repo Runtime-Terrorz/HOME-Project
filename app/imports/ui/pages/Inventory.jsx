@@ -1,13 +1,22 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router-dom';
-import { Container, Table, Header, Grid, Search, Dropdown, Icon, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { Container, Table, Header, Grid, Search, Dropdown, Icon, Button, Loader } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
+import { withTracker } from 'meteor/react-meteor-data';
+import { Inventories } from '../../api/inventory/InventoryCollection';
+import InventoryItem from '../components/InventoryItem';
 
 /** Inventory Page Mockup */
 /** Render a table containing Inventory. */
 class Inventory extends React.Component {
 
-  /** renders page with mockup data until Inventory documents are created */
+  /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
+    return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
+  }
+
+  /** renders page with mockup data until Inventory documents are created */
+  renderPage() {
     return (
         <Container className="inventory">
             <Grid container column={3}>
@@ -56,35 +65,17 @@ class Inventory extends React.Component {
           <Table celled>
             <Table.Header>
               <Table.Row>
+                <Table.HeaderCell>Medication</Table.HeaderCell>
                 <Table.HeaderCell>Name</Table.HeaderCell>
-                <Table.HeaderCell>Reserves</Table.HeaderCell>
+                <Table.HeaderCell>Should Have</Table.HeaderCell>
+                <Table.HeaderCell>Quantity</Table.HeaderCell>
                 <Table.HeaderCell>Storage Location</Table.HeaderCell>
                 <Table.HeaderCell>Lot #</Table.HeaderCell>
                 <Table.HeaderCell>Expiration Date</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              <Table.Row>
-                <Table.Cell>Example Med 1</Table.Cell>
-                <Table.Cell>100</Table.Cell>
-                <Table.Cell>Drawer 5</Table.Cell>
-                <Table.Cell>#09854</Table.Cell>
-                <Table.Cell>09/1/2021</Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>Example Med 2</Table.Cell>
-                <Table.Cell>50</Table.Cell>
-                <Table.Cell>Drawer 3</Table.Cell>
-                <Table.Cell>#09422</Table.Cell>
-                <Table.Cell>09/2/2021</Table.Cell>
-              </Table.Row>
-              <Table.Row>
-                <Table.Cell>Example Med 3</Table.Cell>
-                <Table.Cell>49</Table.Cell>
-                <Table.Cell>Drawer 1</Table.Cell>
-                <Table.Cell>#09822</Table.Cell>
-                <Table.Cell>09/3/2021</Table.Cell>
-              </Table.Row>
+              {this.props.inventories.map((inventory) => <InventoryItem key={inventory._id} inventory={inventory} />)}
             </Table.Body>
           </Table>
         </Container>
@@ -92,4 +83,18 @@ class Inventory extends React.Component {
   }
 }
 
-export default withRouter(Inventory);
+/** Require an array of Stuff documents in the props. */
+Inventory.propTypes = {
+  inventories: PropTypes.array.isRequired,
+  ready: PropTypes.bool.isRequired,
+};
+
+/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
+export default withTracker(() => {
+  // Get access to Stuff documents.
+  const subscription = Inventories.subscribeInventory();
+  return {
+    inventories: Inventories.find({}).fetch(),
+    ready: subscription.ready(),
+  };
+})(Inventory);
