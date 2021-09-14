@@ -53,7 +53,7 @@ class AddInventory extends React.Component {
           <Grid.Column width={10}>
             <Header as="h2" textAlign="center">Add Inventory</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={formSchema} onSubmit={data => this.submit(data, fRef)} >
-              <Segment inverted style={{ backgroundColor: '#800000' }}>
+              <Segment inverted style={{ backgroundColor: '#FB785E' }}>
                 <SelectField name='medication'/>
                 <TextField name='name' placeholder={'Diphenhydramine 50 mg/mL'}/>
                 <Form.Group widths={'equal'}>

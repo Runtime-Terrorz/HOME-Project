@@ -12,7 +12,7 @@ class NavBar extends React.Component {
     return (
       <Menu className={'navBar'} attached="top" borderless>
         <Menu.Item as={NavLink} activeClassName="" exact to="/">
-          <Header className="homeButton" as='h3'>Caduceus</Header>
+          <Header className="homeButton" as='h3'>Home Project</Header>
         </Menu.Item>
         {this.props.currentUser ? (
             [<Menu.Item as={NavLink} activeClassName="active" exact to="/add" key='add'>Add Order</Menu.Item>,
