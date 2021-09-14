@@ -46,7 +46,7 @@ class Signup extends React.Component {
               Register your account
             </Header>
             <Form onSubmit={this.submit}>
-              <Segment stacked>
+              <Segment stacked style={{ backgroundColor: '#800000' }}>
                 <Form.Input
                   label="Email"
                   icon="user"
