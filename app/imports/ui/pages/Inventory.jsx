@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Table, Header, Grid, Search, Dropdown, Icon, Button, Loader } from 'semantic-ui-react';
+import { _ } from 'meteor/underscore';
+import { Container, Table, Header, Grid, Dropdown, Icon, Button, Loader, Input } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
 import { Inventories } from '../../api/inventory/InventoryCollection';
@@ -9,6 +10,18 @@ import InventoryItem from '../components/InventoryItem';
 /** Inventory Page Mockup */
 /** Render a table containing Inventory. */
 class Inventory extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { search: '' };
+  }
+
+  handleChange = (e, { value }) => this.setState({ search: value });
+
+  MedFind = (inventories) => {
+    const { search } = this.state;
+    const lowerCase = search.toLowerCase();
+    return inventories.name.toLowerCase().startsWith(lowerCase);
+  }
 
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
@@ -17,16 +30,19 @@ class Inventory extends React.Component {
 
   /** renders page with mockup data until Inventory documents are created */
   renderPage() {
+    const allmedicine = _.filter(this.props.inventories, this.MedFind);
+    const sorted = _.sortBy(allmedicine, 'name');
     return (
         <Container className="inventory">
             <Grid container column={3}>
               <Grid.Row column={2} className="top inventory">
-              <Grid.Column width={12}>
+              <Grid.Column width={10}>
                 <Header as="h1" textAlign="left">Inventory</Header>
               </Grid.Column>
-              <Grid.Column width={4}>
-                <Search/>
-              </Grid.Column>
+                <Grid.Column width={5}>
+                  <Input transparent type='text' size='large' placeholder='Search by name...' icon='search' fluid
+                         onChange={this.handleChange}/>
+                </Grid.Column>
               </Grid.Row>
               <Grid.Row>
                 <Grid.Column width={12}>
@@ -75,7 +91,7 @@ class Inventory extends React.Component {
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              {this.props.inventories.map((inventory) => <InventoryItem key={inventory._id} inventory={inventory} />)}
+              {sorted.map((inventories, index) => <InventoryItem key={index} inventory={inventories}/>)}
             </Table.Body>
           </Table>
         </Container>
