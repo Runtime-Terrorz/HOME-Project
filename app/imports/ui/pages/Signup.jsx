@@ -40,13 +40,14 @@ class Signup extends React.Component {
     }
     return (
       <Container>
-        <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
+        <Grid textAlign="center" verticalAlign="middle" centered columns={3}>
           <Grid.Column>
+            <br/>
             <Header as="h2" textAlign="center">
               Register your account
             </Header>
             <Form onSubmit={this.submit}>
-              <Segment stacked style={{ backgroundColor: '#800000' }}>
+              <Segment inverted stacked style={{ backgroundColor: '#800000' }}>
                 <Form.Input
                   label="Email"
                   icon="user"
@@ -65,7 +66,7 @@ class Signup extends React.Component {
                   type="password"
                   onChange={this.handleChange}
                 />
-                <Form.Button content="Submit"/>
+                <Form.Button color={'blue'} content="Submit"/>
               </Segment>
             </Form>
             <Message>
