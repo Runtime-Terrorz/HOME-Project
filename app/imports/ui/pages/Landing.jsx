@@ -8,14 +8,14 @@ class Landing extends React.Component {
     return (
         <Grid style={{ marginTop: '50px' }} verticalAlign='middle' textAlign='center' container>
           <Menu>
-          <Grid.Column width={5}>
+          <Grid.Column width={6}>
             <Menu.Item as={NavLink} activeClassName="" exact to="add">
-            <Image width={'300px'} src="/images/addorder.png"/>
+            <Image width={'350px'} src="/images/addorder.jpg"/>
             </Menu.Item>
           </Grid.Column>
-            <Grid.Column width={5}>
+            <Grid.Column width={6}>
               <Menu.Item as={NavLink} activeClassName="" exact to="inventory">
-                <Image width={'280px'} src="/images/listinventory.png"/>
+                <Image width={'330px'} src="/images/listinventory.jpg"/>
               </Menu.Item>
             </Grid.Column>
         </Menu>
