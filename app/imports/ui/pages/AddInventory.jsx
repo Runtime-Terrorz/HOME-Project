@@ -19,7 +19,7 @@ const formSchema = new SimpleSchema({
   location: String,
   should_have: Number,
   quantity: Number,
-  lot: Number,
+  lot: String,
   expiration: String,
 });
 
@@ -65,7 +65,7 @@ class AddInventory extends React.Component {
                 </Form.Group>
                 <Form.Group widths={'equal'}>
                   <TextField name='expiration' placeholder={'Ex: 08/04/2022'}/>
-                  <NumField name='lot' decimal={false}/>
+                  <TextField name='lot'/>
                 </Form.Group>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>

@@ -23,7 +23,7 @@ class InventoryCollection extends BaseCollection {
       location: String,
       should_have: Number,
       quantity: Number,
-      lot: Number,
+      lot: String,
       expiration: String,
       owner: String,
     }));
