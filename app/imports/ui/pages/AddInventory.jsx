@@ -6,7 +6,7 @@ import { Meteor } from 'meteor/meteor';
 import 'uniforms-bridge-simple-schema-2'; // required for Uniforms
 import SimpleSchema from 'simpl-schema';
 import { inventoryDefineMethod } from '../../api/inventory/InventoryCollection.methods';
-import { inventoryMedications } from '../../api/inventory/InventoryCollection';
+import { inventoryMedications, medLocations } from '../../api/inventory/InventoryCollection';
 
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
@@ -16,11 +16,15 @@ const formSchema = new SimpleSchema({
     defaultValue: '',
   },
   name: String,
-  location: String,
+  location: {
+    type: String,
+    allowedValues: medLocations,
+    defaultValue: '',
+  },
   should_have: Number,
   quantity: Number,
-  lot: Number,
-  expiration: String,
+  lot: String,
+  expiration: Date,
 });
 
 /** Renders the Page for adding stuff. */
@@ -54,18 +58,16 @@ class AddInventory extends React.Component {
             <Header as="h2" textAlign="center">Add Inventory</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={formSchema} onSubmit={data => this.submit(data, fRef)} >
               <Segment inverted style={{ backgroundColor: '#FB785E' }}>
-                <SelectField name='medication'/>
+                <SelectField name='medication' placeholder={'Medication Category'}/>
                 <TextField name='name' placeholder={'Diphenhydramine 50 mg/mL'}/>
-                <Form.Group widths={'equal'}>
-                  <TextField name='location'/>
-                  <Form.Group>
-                    <NumField name='should_have' decimal={false}/>
-                    <NumField name='quantity' decimal={false}/>
-                  </Form.Group>
+                <Form.Group widths={3}>
+                  <SelectField name='location'/>
+                  <NumField name='should_have' decimal={false}/>
+                  <NumField name='quantity' decimal={false}/>
                 </Form.Group>
                 <Form.Group widths={'equal'}>
-                  <TextField name='expiration' placeholder={'Ex: 08/04/2022'}/>
-                  <NumField name='lot' decimal={false}/>
+                  <TextField name='expiration'/>
+                  <TextField name='lot'/>
                 </Form.Group>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
