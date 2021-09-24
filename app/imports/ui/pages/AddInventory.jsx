@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, Segment, Header, Form } from 'semantic-ui-react';
 import { AutoForm, ErrorsField, NumField, SelectField, SubmitField, TextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import 'uniforms-bridge-simple-schema-2'; // required for Uniforms
 import SimpleSchema from 'simpl-schema';
 import { inventoryDefineMethod } from '../../api/inventory/InventoryCollection.methods';
@@ -24,16 +26,17 @@ const formSchema = new SimpleSchema({
   should_have: Number,
   quantity: Number,
   lot: String,
-  expiration: Date,
 });
 
 /** Renders the Page for adding stuff. */
-class AddInventory extends React.Component {
+const AddInventory = () => {
+  const [startDate, setStartDate] = useState(new Date());
 
   /** On submit, insert the data. */
-  submit(data, formRef) {
+  const submit = (data, formRef) => {
     // console.log('AddInventory.submit', data);
-    const { medication, name, location, should_have, quantity, lot, expiration } = data;
+    const { medication, name, location, should_have, quantity, lot } = data;
+    const expiration = startDate;
     const owner = Meteor.user().username;
     // console.log(`{ ${name}, ${quantity}, ${condition}, ${owner} }`);
     inventoryDefineMethod.call({ medication, name, location, should_have, quantity, lot, expiration, owner },
@@ -47,16 +50,15 @@ class AddInventory extends React.Component {
           // console.log('Success');
         }
       });
-  }
+  };
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
-  render() {
     let fRef = null;
     return (
         <Grid container centered >
           <Grid.Column width={10}>
             <Header as="h2" textAlign="center">Add Inventory</Header>
-            <AutoForm ref={ref => { fRef = ref; }} schema={formSchema} onSubmit={data => this.submit(data, fRef)} >
+            <AutoForm ref={ref => { fRef = ref; }} schema={formSchema} onSubmit={data => submit(data, fRef)} >
               <Segment inverted style={{ backgroundColor: '#FB785E' }}>
                 <SelectField name='medication' placeholder={'Medication Category'}/>
                 <TextField name='name' placeholder={'Diphenhydramine 50 mg/mL'}/>
@@ -65,8 +67,8 @@ class AddInventory extends React.Component {
                   <NumField name='should_have' decimal={false}/>
                   <NumField name='quantity' decimal={false}/>
                 </Form.Group>
-                <Form.Group widths={'equal'}>
-                  <TextField name='expiration'/>
+                <Form.Group widths={2}>
+                  <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
                   <TextField name='lot'/>
                 </Form.Group>
                 <SubmitField value='Submit'/>
@@ -76,7 +78,6 @@ class AddInventory extends React.Component {
           </Grid.Column>
         </Grid>
     );
-  }
-}
+};
 
 export default AddInventory;
